@@ -17,8 +17,8 @@ const routes: RouteRecordRaw[] = [
         } 
       },
       { 
-        path: 'deck', 
-        component: () => import('pages/Deck.vue'), 
+        path: 'manager/task', 
+        component: () => import('pages/SyncTask.vue'), 
         meta: { 
         } 
       }
