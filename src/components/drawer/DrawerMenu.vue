@@ -4,6 +4,7 @@
     :key='menu.label'
     :content-inset-level='insetLevel'
     class='item'
+    :clickable='logined'
     @click='onItemClick'
   >
     <template #header>
@@ -27,6 +28,7 @@
   </q-expansion-item>
   <q-item
     v-else
+    :clickable='logined'
     :target='menu.target'
     class='item'
     active-class='active'
@@ -69,6 +71,7 @@ const router = useRouter()
 const menus = useMenuStore()
 const active = computed(() => menus.ActiveMainBreadcrumb?.menuId === menu.value.menuId)
 
+const logined = computed(() => true)
 
 const onItemClick = () => {
   menus.ActiveMainBreadcrumb = menu.value

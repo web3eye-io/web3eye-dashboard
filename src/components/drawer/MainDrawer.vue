@@ -6,6 +6,7 @@
         flat dense round icon='swap_horiz'
         aria-label='Menu'
         class='drawer-toggle'
+        @click='toggleLeftDrawer'
       />
     </div>
     <q-list separator>
@@ -32,7 +33,9 @@ const menus = useMenuStore()
 const onItemClick = (menu: MenuItem) => {
   menus.MainBreadcrumbs = [HomePageBreadcrumbs, menu] as Array<MenuItem>
 }
-
+const toggleLeftDrawer = (): void => {
+  leftDrawerMini.value = !leftDrawerMini.value
+}
 </script>
 <style lang='sass' scoped>
 .drawer-toggle
