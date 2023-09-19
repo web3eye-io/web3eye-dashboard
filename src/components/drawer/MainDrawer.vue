@@ -20,7 +20,7 @@
   </q-drawer>
 </template>
 <script setup lang='ts'>
-import { ref, defineAsyncComponent, computed } from 'vue'
+import { ref, defineAsyncComponent } from 'vue'
 import { MenuItem, useMenuStore, HomePageBreadcrumbs } from 'src/localstore'
 import { MainDrawerMenus } from 'src/menus/menus'
 const DrawerMenu = defineAsyncComponent(() => import('src/components/drawer/DrawerMenu.vue'))
