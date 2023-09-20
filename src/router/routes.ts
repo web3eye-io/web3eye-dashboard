@@ -27,6 +27,12 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/Endpoint.vue'), 
         meta: { 
         } 
+      },
+      { 
+        path: 'manager/overview', 
+        component: () => import('pages/Overview.vue'), 
+        meta: { 
+        } 
       }
     ],
   },
