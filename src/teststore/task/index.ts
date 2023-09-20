@@ -22,7 +22,7 @@ export const useSyncTaskStore = defineStore('synctask', {
   }),
   getters: {},
   actions: {
-    getSyncTasks (req: GetSyncTasksRequest, done: (error: boolean, rows?: SyncTask[]) => void) {
+    getSyncTasks (req: GetSyncTasksRequest, done: (error: boolean, rows: SyncTask[]) => void) {
       doActionWithError<GetSyncTasksRequest, GetSyncTasksResponse>(
         API.GET_SYNCTASKS,
         req,
