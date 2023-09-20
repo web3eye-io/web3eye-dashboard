@@ -1,4 +1,5 @@
 import { ChainType } from '../basetypes/const';
+import { BaseRequest } from '../local';
 import { SyncState } from './const';
 
 export interface SyncTask {
@@ -17,7 +18,7 @@ export interface SyncTask {
     Remark: string;
 }
 
-export interface CreateSyncTaskRequest {
+export interface CreateSyncTaskRequest extends BaseRequest{
     ID: string;
     ChainType: ChainType;
     ChainID: string;
@@ -33,11 +34,11 @@ export interface CreateSyncTaskRequest {
     Remark: string;
   }
   
-  export interface CreateSyncTaskResponse {
+  export interface CreateSyncTaskResponse{
     Info: SyncTask;
   }
   
-  export interface DeleteSyncTaskRequest {
+  export interface DeleteSyncTaskRequest extends BaseRequest{
     ID: string;
   }
   
@@ -45,7 +46,7 @@ export interface CreateSyncTaskRequest {
     Info: SyncTask;
   }
   
-  export interface UpdateSyncTaskRequest {
+  export interface UpdateSyncTaskRequest extends BaseRequest{
     ID: string;
     ChainType: ChainType;
     ChainID: string;
@@ -65,7 +66,7 @@ export interface CreateSyncTaskRequest {
     Info: SyncTask;
   }
 
-  export interface GetSyncTasksRequest {
+  export interface GetSyncTasksRequest extends BaseRequest{
     /** @format int32 */
     Offset: number;
     /** @format int32 */
