@@ -25,8 +25,8 @@
                 <span>{{ $t('MSG_SYNCTASK') }}</span>
             </q-card-section>
             <q-card-section>
-                <q-input :disable="updating" v-model='target.ChainID' :label='$t("MSG_CHAIN_ID")' />
                 <q-select :disable="updating"  :options='Object.keys(ChainType)' v-model='target.ChainType' :label='$t("MSG_CHAIN_TYPE")' />
+                <q-input :disable="updating" v-model='target.ChainID' :label='$t("MSG_CHAIN_ID")' />
                 <q-input :disable="updating" v-model='target.Start' :label='$t("MSG_START")' />
                 <q-input :disable="updating" v-model='target.End' :label='$t("MSG_END")' />
                 <q-select :options='Object.keys(SyncState)' v-model='target.SyncState' :label='$t("MSG_SYNC_STATE")' />
