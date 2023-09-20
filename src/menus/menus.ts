@@ -4,8 +4,7 @@ import { MenuItem } from 'src/localstore'
 const MainDrawerMenus = [
    {
     menuId: uid(),
-    label: '任务',
-    caption: '任务管理器',
+    label: 'Task',
     icon: 'pending',
     target: '/manager',
     level: 0,
@@ -13,10 +12,30 @@ const MainDrawerMenus = [
     children: [
       {
         menuId: uid(),
-        label: '任务管理',
+        label: 'Endpoint MGR',
         caption: '',
         icon: 'perm_identity',
         target: '/manager/task',
+        level: 1,
+        sectionBegin: false,
+        children: []
+      } as MenuItem
+    ]
+  } as MenuItem,
+   {
+    menuId: uid(),
+    label: 'Endpoint',
+    icon: 'pending',
+    target: '/manager',
+    level: 0,
+    sectionBegin: false,
+    children: [
+      {
+        menuId: uid(),
+        label: 'Endpoint MRG',
+        caption: '',
+        icon: 'perm_identity',
+        target: '/manager/endpoint',
         level: 1,
         sectionBegin: false,
         children: []

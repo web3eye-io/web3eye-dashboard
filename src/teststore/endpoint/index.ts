@@ -22,7 +22,7 @@ export const useEndpointStore = defineStore('endpoint', {
   }),
   getters: {},
   actions: {
-    getEndpoints (req: GetEndpointsRequest, done: (error: boolean, rows?: Endpoint[]) => void) {
+    getEndpoints (req: GetEndpointsRequest, done: (error: boolean, rows: Endpoint[]) => void) {
       doActionWithError<GetEndpointsRequest, GetEndpointsResponse>(
         API.GET_ENDPOINTS,
         req,

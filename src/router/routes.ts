@@ -21,6 +21,12 @@ const routes: RouteRecordRaw[] = [
         component: () => import('pages/SyncTask.vue'), 
         meta: { 
         } 
+      },
+      { 
+        path: 'manager/endpoint', 
+        component: () => import('pages/Endpoint.vue'), 
+        meta: { 
+        } 
       }
     ],
   },
