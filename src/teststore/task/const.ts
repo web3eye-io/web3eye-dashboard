@@ -1,5 +1,3 @@
-
-
 export enum API {
     CREATE_SYNCTASK = '/api/entrance/v1/create/synctask',
     UPDATE_SYNCTASK = '/api/entrance/v1/update/synctask',

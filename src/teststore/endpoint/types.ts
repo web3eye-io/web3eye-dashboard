@@ -1,5 +1,6 @@
 import { ChainType } from '../basetypes/const';
 import { EndpointState } from '../basetypes/endpoint/const';
+import { BaseRequest } from '../local';
 
 export interface Endpoint {
     ID: string;
@@ -10,7 +11,7 @@ export interface Endpoint {
     Remark: string;
 }
 
-export interface CreateEndpointRequest {
+export interface CreateEndpointRequest extends BaseRequest{
     ChainType: ChainType;
     ChainID: string;
     Address: string;
@@ -23,7 +24,7 @@ export interface CreateEndpointResponse {
 }
   
 
-export interface DeleteEndpointRequest {
+export interface DeleteEndpointRequest extends BaseRequest{
     ID: string;
 }
   
@@ -31,18 +32,16 @@ export interface DeleteEndpointResponse {
     Info: Endpoint;
 }
   
-export interface GetEndpointResponse {
-    Info: Endpoint;
-}
-  
-export interface GetEndpointsRequest {
-    /** @format int32 */
+export interface GetEndpointsRequest extends BaseRequest{
     Offset: number;
-    /** @format int32 */
     Limit: number;
 }
+export interface GetEndpointsResponse {
+    Infos: Array<Endpoint>
+    Total: number
+}
 
-export interface UpdateEndpointRequest {
+export interface UpdateEndpointRequest extends BaseRequest{
     ID: string;
     ChainType: ChainType;
     ChainID: string;
