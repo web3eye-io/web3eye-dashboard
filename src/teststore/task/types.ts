@@ -1,6 +1,6 @@
 import { ChainType } from '../basetypes/const';
+import { SyncState } from '../basetypes/synctask/const';
 import { BaseRequest } from '../local';
-import { SyncState } from './const';
 
 export interface SyncTask {
     ID: string;

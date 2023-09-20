@@ -1,11 +1,5 @@
 import { ChainType } from '../basetypes/const';
-
-export enum EndpointState {
-    EndpointDefault = 'EndpointDefault',
-    EndpointAvaliable = 'EndpointAvaliable',
-    EndpointUnstable = 'EndpointUnstable',
-    EndpointError = 'EndpointError',
-}
+import { EndpointState } from '../basetypes/endpoint/const';
 
 export interface Endpoint {
     ID: string;

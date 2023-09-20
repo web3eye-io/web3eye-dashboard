@@ -1,21 +1,14 @@
 export enum ChainType {
-    ChainUnkonwn = 'ChainUnkonw',
+    ChainUnknown = 'ChainUnknown',
     Ethereum = 'Ethereum',
     Solana = 'Solana'
 }
 
 export enum TokenType{
-    TokenUnkonwn = 'TokenUnkonw',
+    TokenUnknown = 'TokenUnknown',
     ERC721 =  'ERC721',
     ERC1155 = 'ERC1155',
     Metaplex = 'Metaplex',
     NoURI = 'NoURI'
 }
 
-export enum ChainTokenType {
-    TokenUnkonwn = 'TokenUnkonwn',
-    ERC721 = 'ERC721',
-    ERC1155 = 'ERC1155',
-    Metaplex = 'Metaplex',
-    NoURI = 'NoURI',
-}
